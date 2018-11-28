@@ -1,0 +1,19 @@
+$w1920: 1920px;
+$w768: 768px;
+$w320: 320px;
+
+@mixin responsiveFont($bigFont, $smallFont) {
+
+  $bigView: $w1920;
+  $smallView: $w320;
+  $m: ($bigFont - $smallFont) / ($bigView - $smallView);
+  $b: $smallFont - ($m * $smallView);
+
+  @media only screen and (min-width: $smallView) {
+    font-size: calc(#{$m} * 100vw + #{$b});
+  }
+
+  @media only screen and (min-width: $bigView) {
+    font-size: $bigFont;
+  }
+}

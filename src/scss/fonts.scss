@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'AGOptCyrillic';
+  src:  url(~@/assets/fonts/agoptcyrillic-normal.woff2) format('woff2'),
+        url(~@/assets/fonts/agoptcyrillic-normal.woff) format('woff'),
+        url(~@/assets/fonts/agoptcyrillic-normal.ttf) format('truetype');
+
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'AGOptCyrillic';
+  src:    url(~@/assets/fonts/agoptcyrillic-bold.woff2) format('woff2'),
+          url(~@/assets/fonts/agoptcyrillic-bold.woff) format('woff'),
+          url(~@/assets/fonts/agoptcyrillic-bold.ttf) format('truetype');
+
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

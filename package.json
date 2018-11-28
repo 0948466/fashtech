@@ -1,0 +1,44 @@
+{
+  "name": "fashtech_imigize",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Evgenii Grishin evgenij.gr@gmail.com",
+  "license": "UNLICENSED",
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "yarn build && yarn copy && yarn surge",
+    "copy": "copy dist\\index.html dist\\200.html",
+    "start": "yarn serve",
+    "surge": "surge ./dist imigize-network.surge.sh",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "body-scroll-lock": "^2.5.10",
+    "prerender-spa-plugin": "^3.4.0",
+    "rfs": "^7.1.4",
+    "vue": "^2.5.17",
+    "vue-concise-slider": "^3.2.4",
+    "vue-i18n": "^8.0.0",
+    "vue-meta": "^1.5.5",
+    "vue-router": "^3.0.1",
+    "vue-scrollto": "^2.13.0",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.3.0",
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-plugin-unit-mocha": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-airbnb": "^3.0.4",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "chai": "^4.1.2",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "svg-url-loader": "^2.3.2",
+    "vue-cli-plugin-i18n": "^0.5.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}

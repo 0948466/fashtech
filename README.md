@@ -37,7 +37,7 @@ yarn run test:unit
 
 ```
 node -v 
-v8.12.0
+> v8.12.0
 npm -v 
-6.4.1
+> 6.4.1
 ```

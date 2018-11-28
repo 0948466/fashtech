@@ -1,0 +1,349 @@
+$rfs-minimum-font-size: 19;
+@import "~rfs/scss/rfs";
+
+$color1: #0abfca;
+$color2: #f56425;
+$color3: #03151d;
+$colorBody: #05202c;
+$colorMainGba: '5, 32, 44';
+$linearGradient: linear-gradient(to right, #000 0%, #6b6b6b 37%, #e8e8e8 40%, #969696 43%,
+        #737373 47%, #5e5e5e 50%, #737373 53%, #c9c9c9 59%, #000 80%,  #000 100%);
+$linearGradient2: linear-gradient(-90deg, #000000 8%, #6b6b6b 37%, #e8e8e8 40%, #969696 43%,
+        #727272 47%, #5e5e5e 50%, #727272 53%, #c9c9c9 59%, #000000 80%, #000000 100%);
+$linearGradientVideo: linear-gradient(to right, #000 0%, #000 8%, #6b6b6b 37%, #e8e8e8 40%, #969696 43%,
+        #737373 47%, #5e5e5e 50%, #737373 53%, #c9c9c9 59%, #000 88%,  #000 100%);
+
+$linearGradientForBackgroundColor3: linear-gradient(to right, #{$color3} 0%, #{$color3} 19%, #6b6b6b 37%, #e8e8e8 40%, #969696 43%, #737373 47%, #5e5e5e 50%,#737373 53%, #c9c9c9 59%, #03151d 80%, #{$color3} 100%);
+
+$w1920: 1920px;
+$w1000: 1000px;
+$w768: 768px;
+$w320: 320px;
+
+@mixin w1920 {
+  @media only screen and (min-width: #{$w1920}) {
+    @content;
+  }
+}
+
+@mixin w768-1919 {
+  @media only screen and (min-width: #{$w768}) and (max-width: #{$w1920 - 1px}) {
+    @content;
+  }
+}
+
+@mixin w768 {
+  @media only screen and (min-width: #{$w768}) {
+    @content;
+  }
+}
+
+@mixin w320-767 {
+  @media only screen and (max-width: #{$w768 - 1px}) {
+    @content;
+  }
+}
+
+@mixin w320-999 {
+  @media only screen and (max-width: #{$w1000 - 1px}) {
+    @content;
+  }
+}
+
+@mixin w1000 {
+  @media only screen and (min-width: #{$w1000}) {
+    @content;
+  }
+}
+
+@mixin w320-1299 {
+  @media only screen and (min-width: #{$w320}) and (max-width: 1299px) {
+    @content;
+  }
+}
+
+@mixin w768-1299 {
+  @media only screen and (min-width: #{$w768}) and (max-width: 1299px) {
+    @content;
+  }
+}
+
+@mixin w1300 {
+  @media only screen and (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin titleSection {
+  @include responsive-font-size(36px);
+  margin-bottom: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
+
+@mixin titleSection2 {
+  @include responsive-font-size(30);
+  margin-bottom: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
+
+@mixin titleSectionWithGradient {
+  position: relative;
+  padding-bottom: 0.3em;
+  @include responsive-font-size(30);
+  margin-bottom: 1.5em;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: calc( 50% - 194px / 2);
+    width: 194px;
+    height: 2px;
+    background: $linearGradientVideo;
+  }
+}
+
+@mixin titleItem {
+  position: relative;
+  margin-bottom: 1em;
+  padding-left: 12px;
+  @include responsive-font-size(18px);
+  letter-spacing: -0.015em;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #999999;
+  text-align: left;
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #999;
+    border-radius: 50%;
+  }
+}
+
+@mixin textItem {
+  @include responsive-font-size(18px);
+  margin-bottom: 1em;
+  font-weight: 400;
+  line-height: 1.375;
+  color: #dedede;
+  text-align: left;
+  letter-spacing: -0.015em;
+}
+
+@mixin btnLink {
+  padding: 0.65em 2%;
+  width: 266px;
+  box-sizing: border-box;
+  @include responsive-font-size(20px);
+  font-family: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #dedede;
+  border: 1px solid #dedede;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover {
+    border-color: $color2;
+    color: $color1;
+  }
+}
+
+@mixin linearGradient($lineWidth: 2px) {
+  position: relative;
+  width: calc(100% - #{$lineWidth});
+  border-top: $lineWidth solid #edfafa;
+  border-bottom: $lineWidth solid #909294;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(#edfafa 0%, #8f8f8f 10%, #bae5f2 45%,
+            #757575 47%, #bababa 50%, #bababa 58%, #ffffff 61%, #ffffff 64%,
+            #bababa 66%, #474747 70%, #919395 100%);
+    top: -#{$lineWidth};
+    bottom: -#{$lineWidth};
+    width: #{$lineWidth};
+  }
+  &:before {
+    left: -#{$lineWidth};
+  }
+  &:after {
+    right: -#{$lineWidth};
+  }
+}
+$borderWidth: 2px;
+
+@mixin linearGradient2 {
+  position: relative;
+  box-sizing: border-box;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 154px;
+    border-top: $borderWidth solid #fff;
+    border-left: $borderWidth solid #fff;
+    border-right: $borderWidth solid #fff;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 154px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: calc(100% - 154px);
+    background-color: rgba(0, 0, 0, 0.27);
+    border-left: $borderWidth solid #bababa;
+    border-right: $borderWidth solid #bababa;
+    border-bottom: $borderWidth solid #bababa;
+  }
+}
+
+@mixin titleFuturePopup {
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 2.5em;
+  min-width: 300px;
+  @include responsive-font-size(19px);
+  line-height: 1.5;
+  color: #dfdede;
+  letter-spacing: -0.015em;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #009bbc;
+  }
+}
+
+@mixin textFuturePopup {
+  margin-bottom: 1em;
+  @include responsive-font-size(17px);
+  line-height: 1.41;
+  color: #fff;
+  text-align: left;
+}
+
+@mixin sectionPadding {
+  padding: 5em 4% 5em;
+}
+
+@mixin bigBtn {
+  width: 338px;
+  max-width: 90vw;
+  padding: .65em 1% .5em;
+  box-sizing: border-box;
+  @include responsive-font-size(19);
+  text-transform: uppercase;
+  color: #00aebe;
+  background-color: #252525;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+@mixin input {
+  width: 338px;
+  max-width: 90vw;
+  padding: 0.35em 1%;
+  box-sizing: border-box;
+  @include responsive-font-size(17);
+  color: #59dce4;
+  background-color: #252525;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+@mixin btn2 {
+  width: 338px;
+  max-width: 90vw;
+  padding: 0.35em 1%;
+  box-sizing: border-box;
+  @include responsive-font-size(17);
+  color: #8a8a8a;
+  background-color: #022023;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@mixin btnWithArrow {
+  display: block;
+  margin: 0 auto;
+  padding: 0 5px;
+  max-width: 336px;
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  @include responsive-font-size(24);
+  line-height: 44px;
+  color: #00acaa;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: transparent url("../assets/img/schedule-bonuses/button-sign.png") no-repeat center;
+  background-size: contain;
+  &:hover {
+    color: #dbdbdb;
+    background-image: url("../assets/img/schedule-bonuses/button-sign-hover.png");
+  }
+}
+
+@mixin popupPadding {
+  padding: 4em 12% 7em;
+  @include w320-767 {
+    padding: 3em 4% 4em;
+  }
+}
+
+@mixin siteBackgroundColor {
+  background-color: $colorBody;
+}
+
+$widthLine: 320px;
+
+@mixin lineForBackgroundColor3 {
+  position: relative;
+  outline: none;
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 1em);
+    left: calc( 50% - #{$widthLine} / 2);
+    width: $widthLine;
+    height: 2px;
+    background: $linearGradientForBackgroundColor3;
+    outline: none;
+  }
+}
+
+@mixin btnReadmore {
+  @include responsive-font-size(17.39px);
+  color: #959595;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    color: $color2;
+  }
+}
