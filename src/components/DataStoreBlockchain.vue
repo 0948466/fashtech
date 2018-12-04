@@ -1,44 +1,44 @@
-<template>
+<template functional>
   <section class="data-store-blockchain">
     <h2 class="data-store-blockchain__title">
-      {{ $t('dataStoreBlockchain.title') }}
+      {{ parent.$i18n.t('dataStoreBlockchain.title') }}
     </h2>
     <p class="data-store-blockchain__text">
-      {{ $t('dataStoreBlockchain.text1') }}
+      {{ parent.$i18n.t('dataStoreBlockchain.text1') }}
     </p>
     <p class="data-store-blockchain__text">
-      {{ $t('dataStoreBlockchain.text2') }}
+      {{ parent.$i18n.t('dataStoreBlockchain.text2') }}
     </p>
     <p class="data-store-blockchain__text">
-      {{ $t('dataStoreBlockchain.text3') }}
+      {{ parent.$i18n.t('dataStoreBlockchain.text3') }}
     </p>
     <h3 class="data-store-blockchain__scheme__title">
-      {{ $t('dataStoreBlockchain.scheme.title') }}
+      {{ parent.$i18n.t('dataStoreBlockchain.scheme.title') }}
     </h3>
     <div class="data-store-blockchain__scheme__wrap">
       <div class="data-store-blockchain__scheme__top">
         <div class="data-store-blockchain__arrow"/>
         <div class="data-store-blockchain__scheme__item">
-          {{ $t('dataStoreBlockchain.scheme.item1') }}
+          {{ parent.$i18n.t('dataStoreBlockchain.scheme.item1') }}
         </div>
         <div class="data-store-blockchain__arrow"/>
         <div class="data-store-blockchain__scheme__item">
-          {{ $t('dataStoreBlockchain.scheme.item2') }}
+          {{ parent.$i18n.t('dataStoreBlockchain.scheme.item2') }}
         </div>
         <div class="data-store-blockchain__arrow"/>
         <div class="data-store-blockchain__scheme__item">
-          {{ $t('dataStoreBlockchain.scheme.item3') }}
+          {{ parent.$i18n.t('dataStoreBlockchain.scheme.item3') }}
         </div>
         <div class="data-store-blockchain__arrow"/>
         <div class="data-store-blockchain__scheme__item">
-          {{ $t('dataStoreBlockchain.scheme.item4') }}
+          {{ parent.$i18n.t('dataStoreBlockchain.scheme.item4') }}
         </div>
         <div class="data-store-blockchain__arrow"/>
         <div class="data-store-blockchain__circle"/>
       </div>
       <div class="data-store-blockchain__scheme__bottom">
         <div class="data-store-blockchain__scheme__item data-store-blockchain__scheme__item_bottom">
-          {{ $t('dataStoreBlockchain.scheme.item5') }}
+          {{ parent.$i18n.t('dataStoreBlockchain.scheme.item5') }}
         </div>
       </div>
     </div>

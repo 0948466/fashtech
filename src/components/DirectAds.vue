@@ -1,19 +1,19 @@
-<template>
+<template functional>
   <section class="direct-ads">
     <h2 class="direct-ads__title">
-      {{ $t('directAds.title') }}
+      {{ parent.$i18n.t('directAds.title') }}
     </h2>
     <p class="direct-ads__text">
-      {{ $t('directAds.text1') }}
+      {{ parent.$i18n.t('directAds.text1') }}
     </p>
     <p class="direct-ads__text">
-      {{ $t('directAds.text2') }}
+      {{ parent.$i18n.t('directAds.text2') }}
     </p>
     <p class="direct-ads__text">
-      {{ $t('directAds.text3') }}
+      {{ parent.$i18n.t('directAds.text3') }}
     </p>
     <p class="direct-ads__text">
-      {{ $t('directAds.text4') }}
+      {{ parent.$i18n.t('directAds.text4') }}
     </p>
   </section>
 </template>

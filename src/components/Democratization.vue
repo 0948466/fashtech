@@ -1,22 +1,22 @@
-<template>
+<template functional>
   <section class="democratization">
     <h2 class="democratization__title">
-      {{ $t('democratization.title') }}
+      {{ parent.$i18n.t('democratization.title') }}
     </h2>
     <p class="democratization__text">
-      {{ $t('democratization.text1') }}
+      {{ parent.$i18n.t('democratization.text1') }}
     </p>
     <p class="democratization__text">
-      {{ $t('democratization.text2') }}
+      {{ parent.$i18n.t('democratization.text2') }}
     </p>
     <p class="democratization__text">
-      {{ $t('democratization.text3') }}
+      {{ parent.$i18n.t('democratization.text3') }}
     </p>
     <p class="democratization__text">
-      {{ $t('democratization.text4') }}
+      {{ parent.$i18n.t('democratization.text4') }}
     </p>
     <p class="democratization__text">
-      {{ $t('democratization.text5') }}
+      {{ parent.$i18n.t('democratization.text5') }}
     </p>
   </section>
 </template>

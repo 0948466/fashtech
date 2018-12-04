@@ -16,9 +16,6 @@
 
   export default {
     name: 'GetConnected',
-    data: () => ({
-      popupShow: false,
-    }),
     methods: {
       onBtnClick() {
         this.$router.push({ query: { modal: modal.SUBSCRIBE_BY_EMAIL } })

@@ -65,7 +65,14 @@
   .futures-blockchain {
     position: relative;
     @include sectionPadding;
-    background: url("../assets/img/futures-blockchain/wave-for-futures.png") no-repeat 50% 10%;
+    @include w320-767 {
+      background: url("../assets/img/futures-blockchain/wave-for-futures-mobile.png")
+      no-repeat 50% 10%;
+    }
+    @include w768 {
+      background: url("../assets/img/futures-blockchain/wave-for-futures-desktop.png")
+      no-repeat 50% 10%;
+    }
     &::after {
       content: '';
       position: absolute;

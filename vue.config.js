@@ -1,40 +1,42 @@
 const path = require('path')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+const imageminMozjpeg = require('imagemin-mozjpeg')
 
 module.exports = {
   configureWebpack: () => {
     const module = {
-        rules: [
-          {
-            test: /\.(pdf)(\?.*)?$/,
-            use: [
-              {
-                loader: 'file-loader',
-                options: {
-                  name: 'pdf/[name].[ext]',
-                },
+      rules: [
+        {
+          test: /\.(pdf)(\?.*)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'pdf/[name].[ext]',
               },
-            ],
-          },
-          {
-            test: /\.(svg)(\?.*)?$/,
-            use: [
-              {
-                loader: 'svg-url-loader',
-                options: {
-                  limit: 10000,
-                  fallback: {
-                    loader: 'file-loader',
-                    options: {
-                      name: 'img/[name].[hash:8].[ext]',
-                    },
+            },
+          ],
+        },
+        {
+          test: /\.(svg)(\?.*)?$/,
+          use: [
+            {
+              loader: 'svg-url-loader',
+              options: {
+                limit: 10000,
+                fallback: {
+                  loader: 'file-loader',
+                  options: {
+                    name: 'img/[name].[hash:8].[ext]',
                   },
                 },
               },
-            ],
-          },
-        ],
-      }
+            },
+          ],
+        },
+      ],
+    }
     if (process.env.NODE_ENV !== 'production') return { module }
 
     return {
@@ -58,6 +60,25 @@ module.exports = {
             injectProperty: 'PRERENDER_INJECTED',
             inject: {},
           }),
+        }),
+        new ImageminPlugin({
+          disable: process.env.NODE_ENV !== 'production', // Disable during development
+          svgoPlugins: [
+            {
+              removeViewBox: true,
+            },
+          ],
+          jpegtran: null,
+          pngquant: {
+            quality: '65-90',
+            speed: 4,
+          },
+          plugins: [
+            imageminMozjpeg({
+              quality: 80,
+              progressive: true,
+            }),
+          ],
         }),
       ],
     }

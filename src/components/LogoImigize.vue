@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <router-link
     :to="{name: 'home'}"
     class="logo-imigize"/>

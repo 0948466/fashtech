@@ -1,16 +1,16 @@
-<template>
+<template functional>
   <section class="fash-tech">
     <h2 class="fash-tech__title">
-      {{ $t('fashTech.title') }}
+      {{ parent.$i18n.t('fashTech.title') }}
     </h2>
     <p class="fash-tech__text">
-      {{ $t('fashTech.text1') }}
+      {{ parent.$i18n.t('fashTech.text1') }}
     </p>
     <p class="fash-tech__text">
-      {{ $t('fashTech.text2') }}
+      {{ parent.$i18n.t('fashTech.text2') }}
     </p>
     <p class="fash-tech__text">
-      {{ $t('fashTech.text3') }}
+      {{ parent.$i18n.t('fashTech.text3') }}
     </p>
   </section>
 </template>

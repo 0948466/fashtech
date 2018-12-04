@@ -1,10 +1,10 @@
-<template>
+<template functional>
   <section class="developers">
     <h2 class="developers__title">
-      {{ $t('developers.title') }}
+      {{ parent.$i18n.t('developers.title') }}
     </h2>
     <p class="developers__text">
-      {{ $t('developers.text1') }}
+      {{ parent.$i18n.t('developers.text1') }}
     </p>
   </section>
 </template>

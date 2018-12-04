@@ -1,19 +1,19 @@
-<template>
+<template functional>
   <section class="online-shoppers">
     <h2 class="online-shoppers__title">
-      {{ $t('onlineShoppers.title') }}
+      {{ parent.$i18n.t('onlineShoppers.title') }}
     </h2>
     <p class="online-shoppers__text">
-      {{ $t('onlineShoppers.text1') }}
+      {{ parent.$i18n.t('onlineShoppers.text1') }}
     </p>
     <p class="online-shoppers__text">
-      {{ $t('onlineShoppers.text2') }}
+      {{ parent.$i18n.t('onlineShoppers.text2') }}
     </p>
     <p class="online-shoppers__text">
-      {{ $t('onlineShoppers.text3') }}
+      {{ parent.$i18n.t('onlineShoppers.text3') }}
     </p>
     <p class="online-shoppers__text">
-      {{ $t('onlineShoppers.text4') }}
+      {{ parent.$i18n.t('onlineShoppers.text4') }}
     </p>
   </section>
 </template>

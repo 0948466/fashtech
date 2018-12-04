@@ -1,22 +1,22 @@
-<template>
+<template functional>
   <section class="trust-protocol">
     <h2 class="trust-protocol__title">
-      {{ $t('trustProtocol.title') }}
+      {{ parent.$i18n.t('trustProtocol.title') }}
     </h2>
     <p class="trust-protocol__text">
-      {{ $t('trustProtocol.text1') }}
+      {{ parent.$i18n.t('trustProtocol.text1') }}
     </p>
     <p class="trust-protocol__text">
-      {{ $t('trustProtocol.text2') }}
+      {{ parent.$i18n.t('trustProtocol.text2') }}
     </p>
     <p class="trust-protocol__text">
-      {{ $t('trustProtocol.text3') }}
+      {{ parent.$i18n.t('trustProtocol.text3') }}
     </p>
     <p class="trust-protocol__text">
-      {{ $t('trustProtocol.text4') }}
+      {{ parent.$i18n.t('trustProtocol.text4') }}
     </p>
     <p class="trust-protocol__text">
-      {{ $t('trustProtocol.text5') }}
+      {{ parent.$i18n.t('trustProtocol.text5') }}
     </p>
   </section>
 </template>

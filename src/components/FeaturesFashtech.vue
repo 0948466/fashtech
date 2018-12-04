@@ -1,31 +1,31 @@
-<template>
+<template functional>
   <section class="features-fashtech">
     <h2 class="features-fashtech__title">
-      {{ $t('featuresFashtech.title') }}
+      {{ parent.$i18n.t('featuresFashtech.title') }}
     </h2>
     <p class="features-fashtech__text">
-      {{ $t('featuresFashtech.text') }}
+      {{ parent.$i18n.t('featuresFashtech.text') }}
     </p>
 
     <ol class="features-fashtech__ol">
       <li>
-        <span>{{ $t('featuresFashtech.list1') }}</span>
+        <span>{{ parent.$i18n.t('featuresFashtech.list1') }}</span>
         <ol class="features-fashtech__ol2">
-          <li>{{ $t('featuresFashtech.list1a') }}</li>
+          <li>{{ parent.$i18n.t('featuresFashtech.list1a') }}</li>
         </ol>
       </li>
       <li>
         <i18n
           path="featuresFashtech.list2"
           tag="span">
-          <span>{{ $t('featuresFashtech.list2a') }}</span>
+          <span>{{ parent.$i18n.t('featuresFashtech.list2a') }}</span>
         </i18n>
       </li>
       <li>
         <i18n
           path="featuresFashtech.list3"
           tag="span">
-          <span>{{ $t('featuresFashtech.list3a') }}</span>
+          <span>{{ parent.$i18n.t('featuresFashtech.list3a') }}</span>
         </i18n>
       </li>
     </ol>

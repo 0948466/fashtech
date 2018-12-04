@@ -1,19 +1,19 @@
-<template>
+<template functional>
   <section class="business">
     <h2 class="business__title">
-      {{ $t('business.title') }}
+      {{ parent.$i18n.t('business.title') }}
     </h2>
     <p class="business__text">
-      {{ $t('business.text1') }}
+      {{ parent.$i18n.t('business.text1') }}
     </p>
     <p class="business__text">
-      {{ $t('business.text2') }}
+      {{ parent.$i18n.t('business.text2') }}
     </p>
     <p class="business__text">
-      {{ $t('business.text3') }}
+      {{ parent.$i18n.t('business.text3') }}
     </p>
     <p class="business__text">
-      {{ $t('business.text4') }}
+      {{ parent.$i18n.t('business.text4') }}
     </p>
   </section>
 </template>

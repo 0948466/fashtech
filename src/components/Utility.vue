@@ -41,8 +41,6 @@
       UtilityItem,
     },
     data: () => ({
-      popupShow: false,
-      popupContent: null,
       backgroundSrc: [
         backgroundImage0, backgroundImage1, backgroundImage2, backgroundImage3,
       ],

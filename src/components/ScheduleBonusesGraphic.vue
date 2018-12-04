@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <section class="graphic">
     <div class="graphic__item">
       <p class="graphic__item__price">

@@ -19,7 +19,8 @@
           :src="getImgSrc(item, i)">
       </a>
     </div>
-</div></template>
+  </div>
+</template>
 
 <script>
   import MediumIcon from '@/assets/img/press/icon-press-medium.png'
@@ -40,7 +41,6 @@
   import Biz360IconHover from '@/assets/img/press/icon-press-biz360-hover.png'
   import GolosIcon from '@/assets/img/press/icon-press-golos-beta.png'
   import GolosIconHover from '@/assets/img/press/icon-press-golos-beta-hover.png'
-
 
   const data = [
     {

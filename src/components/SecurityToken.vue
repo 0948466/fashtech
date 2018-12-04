@@ -1,29 +1,29 @@
-<template>
+<template functional>
   <section class="security-token">
     <h2 class="security-token__title">
-      {{ $t('securityToken.title') }}
+      {{ parent.$i18n.t('securityToken.title') }}
     </h2>
     <p class="security-token__text">
-      {{ $t('securityToken.text1') }}
+      {{ parent.$i18n.t('securityToken.text1') }}
     </p>
     <p class="security-token__text">
-      {{ $t('securityToken.text2') }}
+      {{ parent.$i18n.t('securityToken.text2') }}
     </p>
 
     <ol class="security-token__ol">
-      <li v-html="$t('securityToken.list1')"/>
-      <li v-html=" $t('securityToken.list2')"/>
+      <li v-html="parent.$i18n.t('securityToken.list1')"/>
+      <li v-html=" parent.$i18n.t('securityToken.list2')"/>
     </ol>
 
     <p
       class="security-token__text"
-      v-html="$t('securityToken.text3')"/>
+      v-html="parent.$i18n.t('securityToken.text3')"/>
     <p
       class="security-token__text"
-      v-html="$t('securityToken.text4')"/>
+      v-html="parent.$i18n.t('securityToken.text4')"/>
     <p
       class="security-token__text"
-      v-html="$t('securityToken.text5')"/>
+      v-html="parent.$i18n.t('securityToken.text5')"/>
   </section>
 </template>
 

@@ -26,9 +26,7 @@
         </div>
       </div>
     </div>
-    <IMGTokenBtns
-      class="introduction__btn"
-      @popupShow="$emit('popupShow')"/>
+    <IMGTokenBtns class="introduction__btn"/>
   </section>
 </template>
 

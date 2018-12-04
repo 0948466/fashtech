@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <div class="img-token-btns">
     <router-link
       :to="{name: 'imigize-token'}"
