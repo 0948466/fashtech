@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "author": "Evgenii Grishin evgenij.gr@gmail.com",
+  "license": "UNLICENSED",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
@@ -16,6 +17,7 @@
   "dependencies": {
     "body-scroll-lock": "^2.5.10",
     "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-webp-webpack-plugin": "^2.0.0",
     "imagemin-webpack-plugin": "^2.3.0",
     "prerender-spa-plugin": "^3.4.0",
     "rfs": "^7.1.4",

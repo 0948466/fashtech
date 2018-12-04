@@ -2,6 +2,7 @@ const path = require('path')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 const imageminMozjpeg = require('imagemin-mozjpeg')
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin')
 
 module.exports = {
   configureWebpack: () => {
@@ -60,6 +61,16 @@ module.exports = {
             injectProperty: 'PRERENDER_INJECTED',
             inject: {},
           }),
+        }),
+        new ImageminWebpWebpackPlugin({
+          config: [{
+            test: /\.(jpe?g|png)$/,
+            options: {
+              quality: 50,
+            },
+          }],
+          detailedLogs: false,
+          strict: false,
         }),
         new ImageminPlugin({
           disable: process.env.NODE_ENV !== 'production', // Disable during development
